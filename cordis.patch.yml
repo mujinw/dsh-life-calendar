@@ -1,0 +1,7 @@
+# 人生日历 · HARNESS 面板插件
+# host 半：注册 /api/life-calendar，把生日 / 预期寿命 / 事件读写到 $DSH_HOME/life-calendar/life.json。
+# client 半：左侧边栏「人生日历」图标 + 主面板（一格一年的一生格 / 年视图 / 月视图 / 事件增删改）。
+
+- insert:
+    - id: life-calendar
+      name: dsh-life-calendar

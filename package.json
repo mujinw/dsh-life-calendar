@@ -1,0 +1,68 @@
+{
+	"name": "dsh-life-calendar",
+	"version": "0.5.1",
+	"description": "人生日历：一格一年，一眼看完一生；年视图 / 月视图 + 重要事件增删改，数据只存本地。",
+	"type": "module",
+	"main": "./lib/index.js",
+	"exports": {
+		".": "./lib/index.js",
+		"./client": "./lib/client.js",
+		"./locale/*.json": "./locale/*.json",
+		"./icon": "./icon.svg",
+		"./cordis.patch.yml": "./cordis.patch.yml",
+		"./package.json": "./package.json"
+	},
+	"files": [
+		"lib/*.js",
+		"locale/*.json",
+		"icon.svg",
+		"cordis.patch.yml",
+		"README.md"
+	],
+	"dsh": {
+		"bundle": {
+			"patch": "./cordis.patch.yml"
+		},
+		"client": {
+			"platform": "web",
+			"immediately": true,
+			"inject": [
+				"@deepseek-ai/dsh-client-connection"
+			]
+		}
+	},
+	"peerDependencies": {
+		"@deepseek-ai/cordis": "*",
+		"@deepseek-ai/dsh-client-connection": "*",
+		"react": "^18.2.0"
+	},
+	"peerDependenciesMeta": {
+		"@deepseek-ai/cordis": {
+			"optional": true
+		},
+		"@deepseek-ai/dsh-client-connection": {
+			"optional": true
+		},
+		"react": {
+			"optional": true
+		}
+	},
+	"keywords": [
+		"dsh-plugin",
+		"deepseek-harness",
+		"life-calendar",
+		"memento",
+		"journal"
+	],
+	"license": "MIT",
+	"private": false,
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/mujinw/dsh-life-calendar.git"
+	},
+	"homepage": "https://github.com/mujinw/dsh-life-calendar#readme",
+	"bugs": {
+		"url": "https://github.com/mujinw/dsh-life-calendar/issues"
+	},
+	"author": "mujinw"
+}
